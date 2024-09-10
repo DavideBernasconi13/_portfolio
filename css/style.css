@@ -1,0 +1,568 @@
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v30-latin-regular.woff') format('woff');
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-v30-latin-500.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v30-latin-500.woff') format('woff');
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+ */
+    url('../fonts/roboto-v30-latin-700.woff') format('woff');
+  /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* variabili */
+:root {
+  --primary: #3999ff;
+  --bg-one: #19191a;
+  --bg-two: #242526;
+  --light: #ffffff;
+  --grey: #6c757d;
+  --dark: #111418;
+  --button: #0966c2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clearer {
+  clear: both;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: 'Roboto', sans-serif;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.content {
+  margin: 0 auto;
+  width: 1160px;
+}
+
+/* grid */
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.6666%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-8 {
+  width: 66.66666%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.main-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* helpers */
+.divider {
+  padding: 20px 0;
+}
+
+.spacer {
+  padding: 70px 0;
+}
+
+.responsive {
+  height: auto;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p,
+a {
+  word-wrap: break-word;
+}
+
+/* Global CSS */
+/* -------------------------------------------------------------------------------- */
+/* ! Header */
+/* -------------------------------------------------------------------------------- */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9998;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.header img {
+  display: block;
+}
+
+.logo {
+  height: 36px;
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menu li {
+  display: inline-block;
+  font-size: 16px;
+  color: var(--light);
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: var(--light);
+  padding: 0 15px;
+  transition: all .3s;
+}
+
+.menu a:hover,
+.current-menu-item a {
+  color: var(--primary);
+}
+
+.social-icon {
+  padding-right: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.social-icon a {
+  color: var(--light);
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.social-icon a:hover {
+  color: var(--primary);
+}
+
+.fa-brands {
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.navbar {
+  cursor: pointer;
+  margin: 0 10px;
+  display: none;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--light);
+  margin-bottom: 4px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Hero */
+/* -------------------------------------------------------------------------------- */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('../img/hero.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: .6;
+  z-index: -1;
+}
+
+.hero-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hero span {
+  display: block;
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 64px;
+  padding: 10px 0;
+  color: var(--primary);
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+/* button */
+.button,
+button,
+.button.inverse:hover {
+  display: inline-block;
+  padding: 16px 30px;
+  background: transparent;
+  text-decoration: none;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 40px;
+  font-size: 16px;
+  text-align: center;
+  min-width: 170px;
+  transition: all .3s;
+}
+
+.button.inverse,
+.button:hover {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! About section */
+/* -------------------------------------------------------------------------------- */
+.flex {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 60px 0;
+}
+
+.flex h2 {
+  font-size: 132px;
+  text-transform: uppercase;
+  color: var(--grey);
+  opacity: .1;
+  letter-spacing: 5px;
+}
+
+.flex h3 {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--light);
+  position: absolute;
+}
+
+.line {
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary);
+  margin: 0 auto;
+}
+
+.grey {
+  background-color: var(--bg-two);
+}
+
+.block-media-text {
+  direction: ltr;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  grid-template-rows: auto;
+}
+
+.block-media {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.block-media img {
+  border-radius: 6px;
+}
+
+.block-text {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 20px 0px 20px 40px;
+}
+
+.main h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.main p {
+  color: var(--grey);
+  margin-bottom: 15px;
+}
+
+.main strong {
+  color: var(--primary);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Servizi */
+/* -------------------------------------------------------------------------------- */
+.main h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.featured-box {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.featured-box-icon i {
+  font-size: 26px;
+  color: var(--primary);
+  display: block;
+  background-color: var(--bg-one);
+  padding: 20px;
+  margin-right: 6px;
+}
+
+.featured-box-text {
+  padding: 0 20px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Portfolio */
+/* -------------------------------------------------------------------------------- */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-card {
+  width: 32%;
+}
+
+.portfolio img {
+  border-radius: 6px;
+  display: block;
+}
+
+.portfolio-overlay {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 20px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  opacity: 0;
+  transition: all .3s;
+  justify-content: center;
+}
+
+.portfolio-overlay:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Testimonials */
+/* -------------------------------------------------------------------------------- */
+.row-between {
+  justify-content: space-between;
+  gap: 10px
+}
+
+.card {
+  width: 49%;
+  padding: 30px;
+  background-color: var(--dark);
+  border-radius: 6px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile img {
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--grey);
+  margin-right: 20px;
+  aspect-ratio: 1/1;
+}
+
+.profile p {
+  font-weight: 600;
+}
+
+.profile span {
+  display: block;
+  font-weight: 400;
+  color: var(--grey);
+}
+
+blockquote {
+  margin-bottom: 20px;
+  line-height: 28px;
+}
+
+.fa-star {
+  color: #ffc00f;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Footer / contatti */
+/* -------------------------------------------------------------------------------- */
+.footer {
+  display: flex;
+}
+
+.inner {
+  margin: 0 5px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .content {
+    margin: 0 4%;
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content {
+    margin: 0 4%;
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-6,
+  .col-8,
+  .col-10 {
+    width: 100%;
+  }
+}
