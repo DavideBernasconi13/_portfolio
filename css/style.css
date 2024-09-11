@@ -330,11 +330,10 @@ button,
 }
 
 .flex h2 {
-  font-size: 132px;
+  font-size: 100px;
   text-transform: uppercase;
   color: var(--grey);
   opacity: .1;
-  letter-spacing: 5px;
 }
 
 .flex h3 {
@@ -529,15 +528,120 @@ blockquote {
 /* -------------------------------------------------------------------------------- */
 .footer {
   display: flex;
+  color: var(--grey);
+}
+
+.footer p {
+  margin-bottom: 18px;
 }
 
 .inner {
   margin: 0 5px;
 }
 
-.footer a {
-  text-decoration: none;
+.footer ul {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+.footer li {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.footer .fa-solid {
+  font-size: 18px;
+  color: var(--primary);
+  margin-right: 5px;
+}
+
+.footer .fa-brands {
+  margin: 0 20px 0 0;
+}
+
+.footer h4 {
+  font-style: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
   color: var(--light);
+  margin-bottom: 18px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--grey);
+  transition: all .3s;
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+/* Credits */
+.credits {
+  background-color: var(--dark);
+  margin-top: 70px;
+  padding: 50px;
+}
+
+.credits-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.credits p {
+  color: var(--grey);
+}
+
+.credits a {
+  margin-left: 20px;
+}
+
+/* form */
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  width: 49%;
+  padding: 10px;
+  background-color: var(--bg-two);
+  border: 1px solid var(--bg-two);
+  border-radius: 3px;
+  color: var(--light);
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-top: 20px;
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--primary);
+  color: var(--light);
+  margin-top: 20px;
+  transition: all .3s;
+}
+
+button:hover {
+  background-color: var(--button);
+  border-color: var(--button);
+}
+
+::placeholder {
+  font-size: 16px;
+  color: var(--grey);
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
@@ -552,6 +656,14 @@ blockquote {
     margin: 0 4%;
     width: 92%;
   }
+
+  .navbar {
+    display: initial;
+  }
+
+  nav {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -564,5 +676,44 @@ blockquote {
   .col-8,
   .col-10 {
     width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .flex h2 {
+    font-size: 60px;
+  }
+
+  .block-media-text {
+    display: block;
+  }
+
+  .block-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .row,
+  .portfolio,
+  .row-between,
+  .footer,
+  .credits-flex {
+    flex-direction: column;
+  }
+
+  .card,
+  .inner {
+    margin-bottom: 30px;
+  }
+
+  .credits {
+    text-align: center;
+  }
+
+  .credits a {
+    display: inline-block;
+    margin: 10px;
   }
 }
