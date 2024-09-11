@@ -158,6 +158,24 @@ a {
 }
 
 /* Global CSS */
+/* Go to top */
+#goToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 45px;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--button);
+  z-index: 9999;
+  transition: all .3s;
+  display: none;
+  border-radius: 6px;
+}
+
+#goToTop:hover {
+  background-color: var(--dark);
+}
+
 /* -------------------------------------------------------------------------------- */
 /* ! Header */
 /* -------------------------------------------------------------------------------- */
