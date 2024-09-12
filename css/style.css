@@ -180,11 +180,12 @@ a {
 /* ! Header */
 /* -------------------------------------------------------------------------------- */
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9998;
+  background-color: var(--primary);
 }
 
 .header {
@@ -221,8 +222,8 @@ header {
 }
 
 .menu a:hover,
-.current-menu-item a {
-  color: var(--primary);
+.active a {
+  color: var(--dark);
 }
 
 .social-icon {
@@ -680,7 +681,27 @@ button:hover {
   }
 
   nav {
-    display: none;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 65px;
+    right: -100%;
+    background-color: var(--primary);
+    transition: all .3s;
+  }
+
+  .open {
+    right: 0;
+  }
+
+  .menu li {
+    display: block;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--bg-two);
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
   }
 }
 

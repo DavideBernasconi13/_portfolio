@@ -20,12 +20,12 @@
 
             <nav class="nav-menu">
                 <ul class="menu">
-                    <li class="current-menu-item"><a href="#" title="Home">Homepage</a></li>
-                    <li><a href="#chi-sono" title="Chi sono">Chi sono</a></li>
-                    <li><a href="#servizi" title="Servizi">Servizi</a></li>
-                    <li><a href="#portfolio" title="Portfolio">Portfolio</a></li>
-                    <li><a href="#testimonials" title="Testimonial">Dicono di me</a></li>
-                    <li><a href="#contact" title="Contatti">Contatti</a></li>
+                    <li><a href="#home" class="menu-item" title="Home">Homepage</a></li>
+                    <li><a href="#chi-sono" class="menu-item" title="Chi sono">Chi sono</a></li>
+                    <li><a href="#servizi" class="menu-item" title="Servizi">Servizi</a></li>
+                    <li><a href="#portfolio" class="menu-item" title="Portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials" class="menu-item" title="Testimonial">Dicono di me</a></li>
+                    <li><a href="#contact" class="menu-item" title="Contatti">Contatti</a></li>
                 </ul>
             </nav>
             <div class="social-icon">
@@ -44,19 +44,19 @@
 
     <main>
         <div id="goToTop" onclick="goToTop()" title="Vai in alto"><i class="fa-solid fa-arrow-up"></i></div>
-        <section class="hero">
+        <section id="home" class="hero">
             <div class="content">
                 <div class="hero-content">
                     <span>Benvenuto</span>
                     <h1>Io sono un web developer</h1>
                     <p>Lavoro a Milano e in Italia</p>
-                    <a href="#" class="button">Contattami</a>
+                    <a href="#contact" class="button">Contattami</a>
                 </div> <!-- end hero-content-->
             </div> <!-- end content-->
         </section> <!-- end section hero -->
 
-        <section class="spacer">
-            <div id="chi-sono" class="flex">
+        <section id="chi-sono" class="spacer">
+            <div class="flex">
                 <h2>Chi sono</h2>
                 <h3>Ti racconto un po' di me <span class="line"></span></h3>
             </div>
@@ -80,8 +80,8 @@
             </div> <!--end content-->
         </section>
 
-        <section class="spacer grey">
-            <div id="servizi" class="flex">
+        <section id="servizi" class="spacer grey">
+            <div class="flex">
                 <h2>Servizi</h2>
                 <h3>In cosa posso esserti utile?<span class="line"></span></h3>
             </div>
@@ -168,8 +168,8 @@
             </div> <!-- end content-->
         </section>
 
-        <section class="spacer">
-            <div id="portfolio" class="flex">
+        <section id="portfolio" class="spacer">
+            <div class="flex">
                 <h2>Portfolio</h2>
                 <h3>I miei lavori <span class="line"></span></h3>
             </div>
@@ -227,8 +227,8 @@
             </div> <!--end content-->
         </section>
 
-        <section class="spacer grey">
-            <div id="testimonials" class="flex">
+        <section id="testimonials" class="spacer grey">
+            <div class="flex">
                 <h2>Testimonials</h2>
                 <h3>Cosa dicono di me <span class="line"></span></h3>
             </div>
@@ -264,10 +264,10 @@
             </div> <!-- end content-->
         </section>
         <footer>
-            <div id="contact" class="flex">
+            <section id="contact" class="flex">
                 <h2>Contattami</h2>
                 <h3>Come puoi contattarmi <span class="line"></span></h3>
-            </div>
+            </section>
             <div class="content">
                 <div class="footer">
                     <div class="col-4">
@@ -297,7 +297,7 @@
                             <form action="#" method="post">
                                 <div class="form">
                                     <label hidden>Name</label>
-                                    <input type="text" placeholder="Il tuo nome" autofocus>
+                                    <input type="text" placeholder="Il tuo nome">
                                     <label hidden>Email</label>
                                     <input type="email" placeholder="La tua email preferita">
                                     <label hidden>Messaggio</label>
